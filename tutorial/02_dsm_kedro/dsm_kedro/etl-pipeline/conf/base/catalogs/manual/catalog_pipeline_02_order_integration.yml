@@ -1,0 +1,15 @@
+# Staging
+staging___system01___myapp_order:
+  type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
+  # folder_id: 300
+  project_folder_name: Staging
+  file_name: staging___system01___myapp_order
+  credentials: dsmlibrary
+
+staging___system02___myapp_order:
+  type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
+  # folder_id: 300
+  project_folder_name: Staging
+  file_name: staging___system02___myapp_order
+  credentials: dsmlibrary
+  

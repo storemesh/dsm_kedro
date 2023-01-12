@@ -1,0 +1,27 @@
+item_detail:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/item_detail.csv
+
+shops:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/shops.csv
+
+order:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/order.csv
+
+user:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/user.csv
+
+item_shop_merge:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/item_shop_merge.csv
+
+order_user_merge:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/order_user_merge.csv
+
+result_table:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/result_table.csv

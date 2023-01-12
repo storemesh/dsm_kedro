@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+  db1:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+       - data:/var/lib/posgresql/data
+    ports:
+      - "5432:5432"
+  
+  app1:
+    build:
+      context: ./app1
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app1/code:/code
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db1
+
+volumes:
+    data:

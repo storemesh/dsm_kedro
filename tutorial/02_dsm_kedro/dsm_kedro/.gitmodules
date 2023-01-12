@@ -1,0 +1,3 @@
+[submodule "etl-pipeline/src/dsm_kedro_plugin"]
+	path = etl-pipeline/src/dsm_kedro_plugin
+	url = https://gitlab.com/storemesh/project-template/data-engineer/kedro-template/dsm_kedro_plugin.git

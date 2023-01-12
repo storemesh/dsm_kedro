@@ -1,0 +1,132 @@
+[2022-11-12T02:09:12.379+0000] {processor.py:156} INFO - Started process (PID=159288) to work on /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:09:12.380+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl_pipeline_dag.py for tasks to queue
+[2022-11-12T02:09:12.380+0000] {logging_mixin.py:117} INFO - [2022-11-12T02:09:12.380+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:09:12.480+0000] {logging_mixin.py:117} INFO - [11/12/22 02:09:12] WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:16: RemovedInAirflow3Warning:                   
+                             This decorator is deprecated.                      
+                                                                                
+                             In previous versions, all                          
+                             subclasses of BaseOperator must use                
+                             apply_default decorator for the                    
+                             `default_args` feature to work                     
+                             properly.                                          
+                                                                                
+                             In current version, it is optional.                
+                             The decorator is applied                           
+                             automatically using the metaclass.                 
+                                                                                
+                               class                                            
+                             KedroOperator(BaseOperator):
+[2022-11-12T02:09:12.484+0000] {logging_mixin.py:117} INFO -                     WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:64: RemovedInAirflow3Warning:                   
+                             Param `schedule_interval` is                       
+                             deprecated and will be removed in a                
+                             future release. Please use                         
+                             `schedule` instead.                                
+                               with DAG(
+[2022-11-12T02:09:12.492+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl-pipeline']) retrieved from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:09:12.524+0000] {logging_mixin.py:117} INFO -                     INFO     Sync 1 DAGs                             dag.py:2573
+[2022-11-12T02:09:12.541+0000] {logging_mixin.py:117} INFO -                     INFO     Setting next_dagrun for etl-pipeline to dag.py:3324
+                             2022-11-12T01:39:12.539726+00:00,                  
+                             run_after=2022-11-12T02:09:12.539726+00            
+                             :00
+[2022-11-12T02:09:12.553+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.177 seconds
+[2022-11-12T02:09:42.676+0000] {processor.py:156} INFO - Started process (PID=159541) to work on /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:09:42.677+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl_pipeline_dag.py for tasks to queue
+[2022-11-12T02:09:42.678+0000] {logging_mixin.py:117} INFO - [2022-11-12T02:09:42.678+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:09:42.745+0000] {logging_mixin.py:117} INFO - [11/12/22 02:09:42] WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:16: RemovedInAirflow3Warning:                   
+                             This decorator is deprecated.                      
+                                                                                
+                             In previous versions, all                          
+                             subclasses of BaseOperator must use                
+                             apply_default decorator for the                    
+                             `default_args` feature to work                     
+                             properly.                                          
+                                                                                
+                             In current version, it is optional.                
+                             The decorator is applied                           
+                             automatically using the metaclass.                 
+                                                                                
+                               class                                            
+                             KedroOperator(BaseOperator):
+[2022-11-12T02:09:42.748+0000] {logging_mixin.py:117} INFO -                     WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:64: RemovedInAirflow3Warning:                   
+                             Param `schedule_interval` is                       
+                             deprecated and will be removed in a                
+                             future release. Please use                         
+                             `schedule` instead.                                
+                               with DAG(
+[2022-11-12T02:09:42.754+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl-pipeline']) retrieved from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:09:42.779+0000] {logging_mixin.py:117} INFO -                     INFO     Sync 1 DAGs                             dag.py:2573
+[2022-11-12T02:09:42.796+0000] {logging_mixin.py:117} INFO -                     INFO     Setting next_dagrun for etl-pipeline to dag.py:3324
+                             2022-11-12T02:09:12.539726+00:00,                  
+                             run_after=2022-11-12T02:39:12.539726+00            
+                             :00
+[2022-11-12T02:09:42.809+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.142 seconds
+[2022-11-12T02:10:13.066+0000] {processor.py:156} INFO - Started process (PID=159750) to work on /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:10:13.066+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl_pipeline_dag.py for tasks to queue
+[2022-11-12T02:10:13.066+0000] {logging_mixin.py:117} INFO - [2022-11-12T02:10:13.066+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:10:13.140+0000] {logging_mixin.py:117} INFO - [11/12/22 02:10:13] WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:16: RemovedInAirflow3Warning:                   
+                             This decorator is deprecated.                      
+                                                                                
+                             In previous versions, all                          
+                             subclasses of BaseOperator must use                
+                             apply_default decorator for the                    
+                             `default_args` feature to work                     
+                             properly.                                          
+                                                                                
+                             In current version, it is optional.                
+                             The decorator is applied                           
+                             automatically using the metaclass.                 
+                                                                                
+                               class                                            
+                             KedroOperator(BaseOperator):
+[2022-11-12T02:10:13.143+0000] {logging_mixin.py:117} INFO -                     WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:64: RemovedInAirflow3Warning:                   
+                             Param `schedule_interval` is                       
+                             deprecated and will be removed in a                
+                             future release. Please use                         
+                             `schedule` instead.                                
+                               with DAG(
+[2022-11-12T02:10:13.150+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl-pipeline']) retrieved from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:10:13.177+0000] {logging_mixin.py:117} INFO -                     INFO     Sync 1 DAGs                             dag.py:2573
+[2022-11-12T02:10:13.198+0000] {logging_mixin.py:117} INFO -                     INFO     Setting next_dagrun for etl-pipeline to dag.py:3324
+                             2022-11-12T02:09:12.539726+00:00,                  
+                             run_after=2022-11-12T02:39:12.539726+00            
+                             :00
+[2022-11-12T02:10:13.213+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.150 seconds
+[2022-11-12T02:10:43.281+0000] {processor.py:156} INFO - Started process (PID=159959) to work on /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:10:43.282+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/etl_pipeline_dag.py for tasks to queue
+[2022-11-12T02:10:43.282+0000] {logging_mixin.py:117} INFO - [2022-11-12T02:10:43.282+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:10:43.347+0000] {logging_mixin.py:117} INFO - [11/12/22 02:10:43] WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:16: RemovedInAirflow3Warning:                   
+                             This decorator is deprecated.                      
+                                                                                
+                             In previous versions, all                          
+                             subclasses of BaseOperator must use                
+                             apply_default decorator for the                    
+                             `default_args` feature to work                     
+                             properly.                                          
+                                                                                
+                             In current version, it is optional.                
+                             The decorator is applied                           
+                             automatically using the metaclass.                 
+                                                                                
+                               class                                            
+                             KedroOperator(BaseOperator):
+[2022-11-12T02:10:43.349+0000] {logging_mixin.py:117} INFO -                     WARNING  /opt/airflow/dags/etl_pipeline_dag. warnings.py:109
+                             py:64: RemovedInAirflow3Warning:                   
+                             Param `schedule_interval` is                       
+                             deprecated and will be removed in a                
+                             future release. Please use                         
+                             `schedule` instead.                                
+                               with DAG(
+[2022-11-12T02:10:43.356+0000] {processor.py:768} INFO - DAG(s) dict_keys(['etl-pipeline']) retrieved from /opt/airflow/dags/etl_pipeline_dag.py
+[2022-11-12T02:10:43.383+0000] {logging_mixin.py:117} INFO -                     INFO     Sync 1 DAGs                             dag.py:2573
+[2022-11-12T02:10:43.401+0000] {logging_mixin.py:117} INFO -                     INFO     Setting next_dagrun for etl-pipeline to dag.py:3324
+                             2022-11-12T02:09:12.539726+00:00,                  
+                             run_after=2022-11-12T02:39:12.539726+00            
+                             :00
+[2022-11-12T02:10:43.415+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.136 seconds

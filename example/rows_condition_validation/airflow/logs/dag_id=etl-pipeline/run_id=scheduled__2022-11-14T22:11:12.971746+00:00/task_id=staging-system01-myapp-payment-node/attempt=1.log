@@ -1,0 +1,604 @@
+[2022-11-14T22:49:25.459+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: etl-pipeline.staging-system01-myapp-payment-node scheduled__2022-11-14T22:11:12.971746+00:00 [queued]>
+[2022-11-14T22:49:25.466+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: etl-pipeline.staging-system01-myapp-payment-node scheduled__2022-11-14T22:11:12.971746+00:00 [queued]>
+[2022-11-14T22:49:25.466+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-14T22:49:25.466+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-11-14T22:49:25.466+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-14T22:49:25.474+0000] {taskinstance.py:1383} INFO - Executing <Task(KedroOperator): staging-system01-myapp-payment-node> on 2022-11-14 22:11:12.971746+00:00
+[2022-11-14T22:49:25.480+0000] {standard_task_runner.py:54} INFO - Started process 7651 to run task
+[2022-11-14T22:49:25.481+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'etl-pipeline', 'staging-system01-myapp-payment-node', 'scheduled__2022-11-14T22:11:12.971746+00:00', '--job-id', '210', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline_dag.py', '--cfg-path', '/tmp/tmp6ivvskg7']
+[2022-11-14T22:49:25.483+0000] {standard_task_runner.py:83} INFO - Job 210: Subtask staging-system01-myapp-payment-node
+[2022-11-14T22:49:25.483+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/etl_pipeline_dag.py
+[2022-11-14T22:49:26.994+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:26] WARNING  /opt/***/dags/etl_pipeline_dag. warnings.py:109
+                             py:21: RemovedInAirflow3Warning:                   
+                             This decorator is deprecated.                      
+                                                                                
+                             In previous versions, all                          
+                             subclasses of BaseOperator must use                
+                             apply_default decorator for the                    
+                             `default_args` feature to work                     
+                             properly.                                          
+                                                                                
+                             In current version, it is optional.                
+                             The decorator is applied                           
+                             automatically using the metaclass.                 
+                                                                                
+                               class                                            
+                             KedroOperator(BaseOperator):
+[2022-11-14T22:49:27.008+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:27] WARNING  /opt/***/dags/etl_pipeline_dag. warnings.py:109
+                             py:75: RemovedInAirflow3Warning:                   
+                             Param `schedule_interval` is                       
+                             deprecated and will be removed in a                
+                             future release. Please use                         
+                             `schedule` instead.                                
+                               with DAG(
+[2022-11-14T22:49:27.042+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex
+[2022-11-14T22:49:27.043+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex
+[2022-11-14T22:49:27.043+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex
+[2022-11-14T22:49:27.043+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex
+[2022-11-14T22:49:27.043+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex
+[2022-11-14T22:49:27.043+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex
+[2022-11-14T22:49:27.084+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_1>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.085+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.085+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_1>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.085+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.085+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_1>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.086+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.086+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_1>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.086+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.086+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_1>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.086+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.087+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_1>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.087+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.088+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.088+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_3>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.088+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.089+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_3>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.089+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.089+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_3>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.089+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.089+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_3>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.090+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.090+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_3>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.090+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_2>, task_group_function.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.090+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function.task_3>, task_group_function.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.092+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_1>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.092+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_1>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_1>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_1>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_1>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.093+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.094+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_1>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.094+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.094+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.094+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_3>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.094+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_3>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_3>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_3>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_3>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_2>, task_group_function__1.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.095+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__1.task_3>, task_group_function__1.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_1>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_1>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_1>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_1>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.097+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_1>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.098+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.098+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_1>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.098+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.098+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.098+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_3>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.098+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_3>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_3>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_3>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_3>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_2>, task_group_function__2.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.099+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__2.task_3>, task_group_function__2.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.100+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_1>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_1>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_1>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_1>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.101+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_1>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.102+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.102+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_1>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.102+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.102+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_3>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_3>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_3>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.103+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_3>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.104+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.104+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_3>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.104+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_2>, task_group_function__3.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.104+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__3.task_3>, task_group_function__3.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.105+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_1>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.105+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.105+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_1>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_1>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_1>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_1>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.106+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.107+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_1>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.107+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_1 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.107+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.107+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_3>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.107+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_3>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_3>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_3>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_3>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.108+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_2>, task_group_function__4.task_3 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.109+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): task_group_function__4.task_3>, task_group_function__4.task_2 already registered for DAG: example_task_group_decorator
+[2022-11-14T22:49:27.174+0000] {logging_mixin.py:117} INFO -                     WARNING  /home/***/.local/lib/python3.8/ warnings.py:109
+                             site-packages/***/example_dags/                
+                             example_subdag_operator.py:43:                     
+                             RemovedInAirflow3Warning: This                     
+                             class is deprecated. Please use                    
+                             `***.utils.task_group.TaskGroup                
+                             `.                                                 
+                               section_1 = SubDagOperator(
+[2022-11-14T22:49:27.197+0000] {logging_mixin.py:117} INFO -                     WARNING  /home/***/.local/lib/python3.8/ warnings.py:109
+                             site-packages/***/example_dags/                
+                             example_subdag_operator.py:52:                     
+                             RemovedInAirflow3Warning: This                     
+                             class is deprecated. Please use                    
+                             `***.utils.task_group.TaskGroup                
+                             `.                                                 
+                               section_2 = SubDagOperator(
+[2022-11-14T22:49:27.231+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonVirtualenvDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.231+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.231+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonVirtualenvDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.231+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonVirtualenvDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonVirtualenvDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonVirtualenvDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.232+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonVirtualenvDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.233+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.233+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.233+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.234+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.234+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.234+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.234+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.234+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.235+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.235+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.235+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.235+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.235+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api_virtualenv
+[2022-11-14T22:49:27.240+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.241+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.242+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.242+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.243+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.243+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.244+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.244+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator
+[2022-11-14T22:49:27.266+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): generate_value>, print_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.266+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_value>, generate_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.266+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): generate_value>, print_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.266+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_value>, generate_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.266+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): generate_value>, print_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.266+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_value>, generate_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.267+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): generate_value>, print_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.267+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_value>, generate_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.267+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): generate_value>, print_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.267+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_value>, generate_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.267+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): generate_value>, print_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.267+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): print_value>, generate_value already registered for DAG: example_xcom_args
+[2022-11-14T22:49:27.273+0000] {taskmixin.py:205} WARNING - Dependency <Task(GetRequestOperator): get_ip>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.274+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, get_ip already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.274+0000] {taskmixin.py:205} WARNING - Dependency <Task(GetRequestOperator): get_ip>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.274+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, get_ip already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.274+0000] {taskmixin.py:205} WARNING - Dependency <Task(GetRequestOperator): get_ip>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.274+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, get_ip already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.275+0000] {taskmixin.py:205} WARNING - Dependency <Task(GetRequestOperator): get_ip>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.275+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, get_ip already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.275+0000] {taskmixin.py:205} WARNING - Dependency <Task(GetRequestOperator): get_ip>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.275+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, get_ip already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.275+0000] {taskmixin.py:205} WARNING - Dependency <Task(GetRequestOperator): get_ip>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.275+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, get_ip already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.276+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.276+0000] {taskmixin.py:205} WARNING - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.276+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.277+0000] {taskmixin.py:205} WARNING - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.278+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.278+0000] {taskmixin.py:205} WARNING - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator
+[2022-11-14T22:49:27.292+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.292+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.293+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.293+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.293+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.293+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.293+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.293+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.294+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.294+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.294+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): extract>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.294+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, extract already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.295+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.295+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.295+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.295+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.295+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.295+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.296+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.296+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.296+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.296+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.296+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): transform>, load already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.296+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): load>, transform already registered for DAG: tutorial_taskflow_api
+[2022-11-14T22:49:27.300+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): push_by_returning>, puller already registered for DAG: example_xcom
+[2022-11-14T22:49:27.300+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): puller>, push_by_returning already registered for DAG: example_xcom
+[2022-11-14T22:49:27.300+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): push_by_returning>, puller already registered for DAG: example_xcom
+[2022-11-14T22:49:27.300+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): puller>, push_by_returning already registered for DAG: example_xcom
+[2022-11-14T22:49:27.301+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): push_by_returning>, puller already registered for DAG: example_xcom
+[2022-11-14T22:49:27.301+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): puller>, push_by_returning already registered for DAG: example_xcom
+[2022-11-14T22:49:27.301+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): push_by_returning>, puller already registered for DAG: example_xcom
+[2022-11-14T22:49:27.301+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): puller>, push_by_returning already registered for DAG: example_xcom
+[2022-11-14T22:49:27.301+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): push_by_returning>, puller already registered for DAG: example_xcom
+[2022-11-14T22:49:27.301+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): puller>, push_by_returning already registered for DAG: example_xcom
+[2022-11-14T22:49:27.302+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): push_by_returning>, puller already registered for DAG: example_xcom
+[2022-11-14T22:49:27.302+0000] {taskmixin.py:205} WARNING - Dependency <Task(_PythonDecoratedOperator): puller>, push_by_returning already registered for DAG: example_xcom
+[2022-11-14T22:49:27.331+0000] {logging_mixin.py:117} INFO -                     WARNING  /home/***/.local/lib/python3.8/ warnings.py:109
+                             site-packages/***/configuration                
+                             .py:545: DeprecationWarning: The                   
+                             sql_alchemy_conn option in [core]                  
+                             has been moved to the                              
+                             sql_alchemy_conn option in                         
+                             [database] - the old setting has                   
+                             been used, but please update your                  
+                             config.                                            
+                               option =                                         
+                             self._get_environment_variables(dep                
+                             recated_key, deprecated_section,                   
+                             key, section)
+[2022-11-14T22:49:27.389+0000] {logging_mixin.py:117} INFO -                     INFO     Running <TaskInstance:          task_command.py:384
+                             etl-pipeline.staging-system01-m                    
+                             yapp-payment-node                                  
+                             scheduled__2022-11-14T22:11:12.                    
+                             971746+00:00 [running]> on host                    
+                             2f8a72d30f8f
+[2022-11-14T22:49:27.464+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl-pipeline
+AIRFLOW_CTX_TASK_ID=staging-system01-myapp-payment-node
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-14T22:11:12.971746+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-14T22:11:12.971746+00:00
+[2022-11-14T22:49:28.074+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:28] INFO     Kedro project etl-pipeline           session.py:343
+[2022-11-14T22:49:30.821+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:31.092+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:31] INFO     Loading data from               data_catalog.py:343
+                             'landing___system01___myapp_pay                    
+                             ment' (DsmListDataNode)...
+[2022-11-14T22:49:31.589+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:32.265+0000] {logging_mixin.py:117} INFO - version_file_id : {'file_id': 1432, 'timestamp': '2022/11/07 10:15:17'}
+[2022-11-14T22:49:32.583+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:32] WARNING  /home/***/.local/lib/python3.8/ warnings.py:109
+                             site-packages/botocore/httpsession.                
+                             py:28: DeprecationWarning:                         
+                             'urllib3.contrib.pyopenssl' module                 
+                             is deprecated and will be removed                  
+                             in a future release of urllib3 2.x.                
+                             Read more in this issue:                           
+                             https://github.com/urllib3/urllib3/                
+                             issues/2680                                        
+                               from urllib3.contrib.pyopenssl                   
+                             import orig_util_SSLContext as                     
+                             SSLContext
+[2022-11-14T22:49:33.139+0000] {logging_mixin.py:117} INFO - list_datanode is out of range for index 1
+[2022-11-14T22:49:33.157+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:33] INFO     Running node:                           node.py:327
+                             staging___system01___myapp_payment___no            
+                             de:                                                
+                             staging_app1([landing___system01___myap            
+                             p_payment]) ->                                     
+                             [staging___system01___myapp_payment]
+[2022-11-14T22:49:33.169+0000] {logging_mixin.py:117} INFO -                     ERROR    Node                                    node.py:352
+                             'staging___system01___myapp_payment___n            
+                             ode:                                               
+                             staging_app1([landing___system01___myap            
+                             p_payment]) ->                                     
+                             [staging___system01___myapp_payment]'              
+                             failed with error:                                 
+                             No active exception to reraise
+[2022-11-14T22:49:33.170+0000] {logging_mixin.py:117} INFO -                     WARNING  No nodes ran. Repeat the previous     runner.py:198
+                             command to attempt a new run.
+[2022-11-14T22:49:33.171+0000] {logging_mixin.py:117} INFO - Difference is: 0:00:02.084154
+[2022-11-14T22:49:34.212+0000] {logging_mixin.py:117} WARNING -   0%|          | 0.00/1.35k [00:00<?, ?B/s]
+[2022-11-14T22:49:34.369+0000] {logging_mixin.py:117} WARNING - 100%|##########| 1.35k/1.35k [00:00<00:00, 8.82kB/s]
+[2022-11-14T22:49:34.489+0000] {logging_mixin.py:117} WARNING - 100%|##########| 1.35k/1.35k [00:00<00:00, 4.99kB/s]
+[2022-11-14T22:49:35.747+0000] {logging_mixin.py:117} INFO - ------------fail-------------
+[2022-11-14T22:49:38.620+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:38.626+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:38] INFO     Loading data from               data_catalog.py:343
+                             'staging___system02___myapp_pay                    
+                             ment' (DsmDataNode)...
+[2022-11-14T22:49:39.043+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:39.893+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:39] INFO     Loading data from               data_catalog.py:343
+                             'integration___Payment'                            
+                             (DsmDataNode)...
+[2022-11-14T22:49:40.463+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:41.271+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:41] INFO     Loading data from               data_catalog.py:343
+                             'landing___system02___myapp_pay                    
+                             ment' (DsmListDataNode)...
+[2022-11-14T22:49:41.727+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:42.337+0000] {logging_mixin.py:117} INFO - version_file_id : {'file_id': 1438, 'timestamp': '2022/11/07 10:16:14'}
+[2022-11-14T22:49:42.914+0000] {logging_mixin.py:117} INFO - list_datanode is out of range for index 1
+[2022-11-14T22:49:42.943+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:42] INFO     Loading data from               data_catalog.py:343
+                             'landing___system01___myapp_pay                    
+                             ment' (DsmListDataNode)...
+[2022-11-14T22:49:43.422+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:43.934+0000] {logging_mixin.py:117} INFO - version_file_id : {'file_id': 1432, 'timestamp': '2022/11/07 10:15:17'}
+[2022-11-14T22:49:44.418+0000] {logging_mixin.py:117} INFO - list_datanode is out of range for index 1
+[2022-11-14T22:49:44.558+0000] {logging_mixin.py:117} INFO - [11/14/22 22:49:44] INFO     Loading data from               data_catalog.py:343
+                             'staging___system01___myapp_pay                    
+                             ment' (DsmDataNode)...
+[2022-11-14T22:49:45.023+0000] {logging_mixin.py:117} INFO - Init DataNode sucessful!
+[2022-11-14T22:49:47.478+0000] {logging_mixin.py:117} INFO - ------------
+[2022-11-14T22:49:47.480+0000] {logging_mixin.py:117} INFO - {
+    "status": "FAILED",
+    "end_time": "2022-11-14 22:49:47.478926",
+    "result": {
+        "pipeline": {
+            "name": "Payment",
+            "project": "tc-06",
+            "git": {
+                "commits": [
+                    {
+                        "commit": "61d771c352cc65b725c5d45e1f080b958830c57a",
+                        "Author": "patcharapon1995 <patcharapon1995@gmail.com>",
+                        "Date": "Thu Nov 3 08:39:07 2022 +0000",
+                        "message": "[add] rename pipelines"
+                    }
+                ],
+                "current_branch_name": "feature/validation-logs",
+                "last_commit_url": "https://gitlab.com/storemesh/project-template/data-engineer/kedro-template/kedro-example/kedro-tc-06/-/commit/61d771c352cc65b725c5d45e1f080b958830c57a",
+                "last_editor": "patcharapon1995 <patcharapon1995@gmail.com>"
+            }
+        },
+        "datanodes": {
+            "staging___system02___myapp_payment": {
+                "id": "staging___system02___myapp_payment",
+                "file_id": 1448,
+                "meta": {
+                    "file_id": 1448,
+                    "folder_id": 300,
+                    "file_name": "staging___system02___myapp_payment",
+                    "config": null
+                }
+            },
+            "integration___Payment": {
+                "id": "integration___Payment",
+                "file_id": 1459,
+                "meta": {
+                    "file_id": 1459,
+                    "folder_id": 301,
+                    "file_name": "Payment",
+                    "config": null
+                }
+            },
+            "landing___system02___myapp_payment": {
+                "id": "landing___system02___myapp_payment",
+                "file_id": 1439,
+                "meta": {
+                    "file_id": 1439,
+                    "folder_id": 299,
+                    "file_name": "landing___system02___myapp_payment",
+                    "config": null
+                }
+            },
+            "landing___system01___myapp_payment": {
+                "id": "landing___system01___myapp_payment",
+                "file_id": 1433,
+                "meta": {
+                    "file_id": 1433,
+                    "folder_id": 299,
+                    "file_name": "landing___system01___myapp_payment",
+                    "config": null
+                }
+            },
+            "staging___system01___myapp_payment": {
+                "id": "staging___system01___myapp_payment",
+                "file_id": 1447,
+                "meta": {
+                    "file_id": 1447,
+                    "folder_id": 300,
+                    "file_name": "staging___system01___myapp_payment",
+                    "config": {
+                        "columns": {
+                            "id": {
+                                "data_type": "str",
+                                "nullable": true,
+                                "is_required": true,
+                                "validation_rule": []
+                            },
+                            "amount": {
+                                "data_type": "float",
+                                "nullable": true,
+                                "is_required": false,
+                                "validation_rule": [
+                                    2
+                                ]
+                            },
+                            "created": {
+                                "data_type": "datetime64[ns]",
+                                "nullable": true,
+                                "is_required": true
+                            }
+                        },
+                        "pk_column": "id"
+                    }
+                }
+            }
+        },
+        "functions": {
+            "staging___system01___myapp_payment___node": {
+                "func_id": "staging___system01___myapp_payment___node",
+                "func_name": "staging___system01___myapp_payment___node",
+                "python_code": "def staging_app1(data: Tuple[dd.DataFrame, int]) -> Tuple[dd.DataFrame, List[int]]:\n    ddf, meta = data\n    ddf = get_payment_cost(ddf, \"system01\")\n    meta_list = [meta]\n    raise\n    return (ddf, meta_list)\n",
+                "input_ids": [
+                    "landing___system01___myapp_payment"
+                ],
+                "output_ids": [
+                    "staging___system01___myapp_payment"
+                ]
+            },
+            "staging___system02___myapp_payment___node": {
+                "func_id": "staging___system02___myapp_payment___node",
+                "func_name": "staging___system02___myapp_payment___node",
+                "python_code": "def staging_app2(data: Tuple[dd.DataFrame, int]) -> Tuple[dd.DataFrame, List[int]]:\n    ddf, meta = data\n    ddf = get_payment_cost(ddf, \"system02\")\n    meta_list = [meta]\n    return (ddf, meta_list)\n",
+                "input_ids": [
+                    "landing___system02___myapp_payment"
+                ],
+                "output_ids": [
+                    "staging___system02___myapp_payment"
+                ]
+            },
+            "integration___Payment___node": {
+                "func_id": "integration___Payment___node",
+                "func_name": "integration___Payment___node",
+                "python_code": "def merge_two_source(\n    data_app1: Tuple[dd.DataFrame, int], \n    data_app2: Tuple[dd.DataFrame, int]\n) -> Tuple[dd.DataFrame, List[int]]:\n    ddf_app1, app1_fid = data_app1\n    ddf_app2, app2_fid = data_app2\n    all_merge = dd.concat([ddf_app1, ddf_app2])    \n\n    lineage_id = [app1_fid, app2_fid]\n    return (all_merge, lineage_id)\n",
+                "input_ids": [
+                    "staging___system01___myapp_payment",
+                    "staging___system02___myapp_payment"
+                ],
+                "output_ids": [
+                    "integration___Payment"
+                ]
+            }
+        },
+        "input_edges": [
+            {
+                "edge_id": "landing___system01___myapp_payment_____staging___system01___myapp_payment___node",
+                "source": "landing___system01___myapp_payment",
+                "target": "staging___system01___myapp_payment___node"
+            },
+            {
+                "edge_id": "landing___system02___myapp_payment_____staging___system02___myapp_payment___node",
+                "source": "landing___system02___myapp_payment",
+                "target": "staging___system02___myapp_payment___node"
+            },
+            {
+                "edge_id": "staging___system01___myapp_payment_____integration___Payment___node",
+                "source": "staging___system01___myapp_payment",
+                "target": "integration___Payment___node"
+            },
+            {
+                "edge_id": "staging___system02___myapp_payment_____integration___Payment___node",
+                "source": "staging___system02___myapp_payment",
+                "target": "integration___Payment___node"
+            }
+        ],
+        "output_edges": [
+            {
+                "edge_id": "staging___system01___myapp_payment___node_____staging___system01___myapp_payment",
+                "source": "staging___system01___myapp_payment___node",
+                "target": "staging___system01___myapp_payment"
+            },
+            {
+                "edge_id": "staging___system02___myapp_payment___node_____staging___system02___myapp_payment",
+                "source": "staging___system02___myapp_payment___node",
+                "target": "staging___system02___myapp_payment"
+            },
+            {
+                "edge_id": "integration___Payment___node_____integration___Payment",
+                "source": "integration___Payment___node",
+                "target": "integration___Payment"
+            }
+        ],
+        "monad_log": {
+            "landing___system01___myapp_payment_____staging___system01___myapp_payment___node": null,
+            "staging___system01___myapp_payment___node_____staging___system01___myapp_payment": null,
+            "landing___system02___myapp_payment_____staging___system02___myapp_payment___node": null,
+            "staging___system02___myapp_payment___node_____staging___system02___myapp_payment": null,
+            "staging___system01___myapp_payment_____integration___Payment___node": null,
+            "staging___system02___myapp_payment_____integration___Payment___node": null,
+            "integration___Payment___node_____integration___Payment": null
+        },
+        "function_log": {
+            "staging___system01___myapp_payment___node": {
+                "func_id": "staging___system01___myapp_payment___node",
+                "name": "staging___system01___myapp_payment___node",
+                "type": "Dask",
+                "start": "2022-11-14 22:49:31.087261",
+                "end": "2022-11-14 22:49:33.171415",
+                "duration": "0:00:02.084154",
+                "is_success": false,
+                "logs_file_id": 1482
+            }
+        }
+    }
+}
+[2022-11-14T22:49:47.722+0000] {logging_mixin.py:117} INFO - <Response [200]>
+[2022-11-14T22:49:47.724+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/etl_pipeline_dag.py", line 48, in execute
+    session.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/framework/session/session.py", line 407, in run
+    run_result = runner.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/runner/runner.py", line 88, in run
+    self._run(pipeline, catalog, hook_manager, session_id)
+  File "/code/etl-pipeline/src/dsm_kedro_plugin/custom_runner/dsm_runner.py", line 241, in _run
+    self._run_all_node(
+  File "/code/etl-pipeline/src/dsm_kedro_plugin/custom_runner/dsm_runner.py", line 151, in _run_all_node
+    raise error_exception
+  File "/code/etl-pipeline/src/dsm_kedro_plugin/custom_runner/dsm_runner.py", line 98, in _run_all_node
+    run_node(node, catalog, hook_manager, self._is_async, session_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/runner/runner.py", line 304, in run_node
+    node = _run_node_sequential(node, catalog, hook_manager, session_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/runner/runner.py", line 398, in _run_node_sequential
+    outputs = _call_node_run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/runner/runner.py", line 366, in _call_node_run
+    raise exc
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/runner/runner.py", line 356, in _call_node_run
+    outputs = node.run(inputs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/pipeline/node.py", line 353, in run
+    raise exc
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/pipeline/node.py", line 342, in run
+    outputs = self._run_with_one_input(inputs, self._inputs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kedro/pipeline/node.py", line 373, in _run_with_one_input
+    return self._func(inputs[node_input])
+  File "/code/etl-pipeline/src/etl_pipeline/pipelines/Payment/nodes.py", line 20, in staging_app1
+    raise
+RuntimeError: No active exception to reraise
+[2022-11-14T22:49:47.738+0000] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=etl-pipeline, task_id=staging-system01-myapp-payment-node, execution_date=20221114T221112, start_date=20221114T224925, end_date=20221114T224947
+[2022-11-14T22:49:47.765+0000] {standard_task_runner.py:102} ERROR - Failed to execute job 210 for task staging-system01-myapp-payment-node (No active exception to reraise; 7651)
+[2022-11-14T22:49:47.799+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2022-11-14T22:49:47.817+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

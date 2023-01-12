@@ -1,0 +1,23 @@
+# Staging
+staging___system01___myapp_payment:
+  type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
+  # folder_id: 300
+  project_folder_name: Staging
+  file_name: staging___system01___myapp_payment
+  credentials: dsmlibrary
+  config: {
+        'columns': {
+            'id': { 'data_type': 'str', 'nullable': True, 'is_required': True, 'validation_rule': []},
+            'amount': { 'data_type': 'float', 'nullable': True, 'is_required': False, 'validation_rule': [2] },
+            'created': { 'data_type': 'datetime64[ns]', 'nullable': True, 'is_required': True},
+        },
+        'pk_column': 'id'
+    }
+
+
+staging___system02___myapp_payment:
+  type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
+  # folder_id: 300
+  project_folder_name: Staging
+  file_name: staging___system02___myapp_payment
+  credentials: dsmlibrary

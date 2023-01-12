@@ -1,0 +1,23 @@
+# conf/base/catalogs/manual/integration_Item.yml
+
+# system01
+staging___system01___myapp_item:
+    type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
+    project_folder_name: Staging
+    file_name: staging___system01___myapp_item
+    credentials: dsmlibrary
+
+# system02
+staging___system02___myapp_product:
+    type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
+    project_folder_name: Staging
+    file_name: staging___system02___myapp_product
+    credentials: dsmlibrary
+
+# clickhouse
+clickhouse___Item:
+    type: dsm_kedro_plugin.custom_dataset.clickhouse_dataset.ClickHouseDataset
+    table_name: Item
+    partitioned_column: id 
+    credentials: clickhouse
+    if_exist: drop 

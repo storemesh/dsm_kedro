@@ -1,0 +1,9 @@
+# more detail: https://kedro.readthedocs.io/en/stable/kedro.extras.datasets.api.APIDataSet.html#kedro.extras.datasets.api.APIDataSet
+
+# api___activity_score:
+#   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmAPIDataSet
+#   url: http://api.analytics.ditp.go.th/api/v1/exporter/0105537041030/suggest_activity/
+#   method: POST
+#   data: {}
+#   headers: {}
+#   credentials: api___EXPORTER_JOURNEY
