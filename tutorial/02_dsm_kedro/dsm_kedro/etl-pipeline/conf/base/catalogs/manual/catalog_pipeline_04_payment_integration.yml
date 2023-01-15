@@ -5,7 +5,7 @@ staging___system01___myapp_payment:
   project_folder_name: Staging
   file_name: staging___system01___myapp_payment
   credentials: dsmlibrary
-  config: {
+  schema: {
         'columns': {
             'id': { 'data_type': 'str', 'nullable': True, 'is_required': True, 'validation_rule': []},
             'amount': { 'data_type': 'float', 'nullable': True, 'is_required': False, 'validation_rule': [2] },

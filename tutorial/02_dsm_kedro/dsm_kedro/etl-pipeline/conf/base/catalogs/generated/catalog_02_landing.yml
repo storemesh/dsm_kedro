@@ -3,52 +3,52 @@
 ################################################################################
 
 
-landing___system01___myapp_order:
+l.sys1_myapp_order:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system01___myapp_order
+  file_name: sys1_myapp_order
   credentials: dsmlibrary
 
-landing___system01___myapp_orderitem:
+l.sys1_myapp_orderitem:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system01___myapp_orderitem
+  file_name: sys1_myapp_orderitem
   credentials: dsmlibrary
 
-landing___system01___myapp_item:
+l.sys1_myapp_item:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system01___myapp_item
+  file_name: sys1_myapp_item
   credentials: dsmlibrary
 
-landing___system01___myapp_payment:
+l.sys1_myapp_payment:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system01___myapp_payment
+  file_name: sys1_myapp_payment
   credentials: dsmlibrary
 
-landing___system02___myapp_order:
+l.sys2_myapp_order:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system02___myapp_order
+  file_name: sys2_myapp_order
   credentials: dsmlibrary
 
-landing___system02___myapp_orderitem:
+l.sys2_myapp_orderitem:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system02___myapp_orderitem
+  file_name: sys2_myapp_orderitem
   credentials: dsmlibrary
 
-landing___system02___myapp_product:
+l.sys2_myapp_product:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system02___myapp_product
+  file_name: sys2_myapp_product
   credentials: dsmlibrary
 
-landing___system02___myapp_payment:
+l.sys2_myapp_payment:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmListDataNode
   folder_id: 309
-  file_name: landing___system02___myapp_payment
+  file_name: sys2_myapp_payment
   credentials: dsmlibrary
 
 
