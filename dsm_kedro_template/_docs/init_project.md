@@ -15,7 +15,7 @@ git commit -m "first commit"
 3. clone dsm_kedro_plugin as git-submodule
 ```sh
 cd etl-pipeline/src
-git submodule add https://gitlab.com/storemesh/project-template/data-engineer/kedro-template/dsm_kedro_plugin.git
+git submodule add https://github.com/storemesh/dsm_kedro_plugin.git
 ```
 after all above step, your project structure should be like this  
 ![clone_submodule](images/clone_submodule.png)

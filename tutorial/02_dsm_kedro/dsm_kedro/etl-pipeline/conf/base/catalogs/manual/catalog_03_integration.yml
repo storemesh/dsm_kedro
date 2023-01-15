@@ -24,12 +24,12 @@ integration___Orderitem:
   credentials: dsmlibrary
     
     
-integration___Item:
+i.item:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
   folder_id: 311
   file_name: Item
   credentials: dsmlibrary
-  config: {'columns': {'id': {'data_type': 'string', 'is_required': True}, 'title': {'data_type': 'string', 'is_required': True}, 'unit': {'data_type': 'string', 'is_required': True}, 'description': {'data_type': 'string', 'is_required': False}, 'unit_price': {'data_type': 'float', 'is_required': True, 'validation_rule': [1]}}, 'pk_column': 'id'}  
+  schema: {'columns': {'id': {'data_type': 'string', 'is_required': True}, 'title': {'data_type': 'string', 'is_required': True}, 'unit': {'data_type': 'string', 'is_required': True}, 'description': {'data_type': 'string', 'is_required': False}, 'unit_price': {'data_type': 'float', 'is_required': True, 'validation_rule': [1]}}, 'pk_column': 'id'}  
     
 integration___Payment:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode

@@ -8,28 +8,28 @@ def create_pipeline(**kwargs) -> Pipeline:
             # app 1
             node(
                 func=staging_app1,
-                inputs="landing___system01___myapp_item",
-                outputs="staging___system01___myapp_item",
-                name="staging___system01___myapp_item____node",
+                inputs="l.sys1_myapp_item",
+                outputs="s.sys1_myapp_item",
+                name="staging_app1_node",
             ),
 
             # app 2
             node(
                 func=staging_app2,
-                inputs="landing___system02___myapp_product",
-                outputs="staging___system02___myapp_product",
-                name="staging___system02___myapp_product___node",
+                inputs="l.sys2_myapp_product",
+                outputs="s.sys2_myapp_product",
+                name="staging_app2_node",
             ),
             
             # integration
             node(
                 func=merge_item,
                 inputs=dict(
-                    data_app1="staging___system01___myapp_item", 
-                    data_app2="staging___system02___myapp_product",
+                    data_app1="s.sys1_myapp_item", 
+                    data_app2="s.sys2_myapp_product",
                 ),
-                outputs="integration___Item",
-                name="integration___Item___node",
+                outputs="i.item",
+                name="merge_item_node",
             ),
 
             # # clickhouse
