@@ -23,20 +23,9 @@ def get_error_df(df, column_list, failed_index):
     return df_result
 
 def check_is_unique(series):
-    # import pdb;pdb.set_trace()
-    # return df['TR_NO'].is_unique
-    # import pdb; pdb.set_trace()
-    series_value = series #.compute()
-    # column_name = series_value.name
+    series_value = series
     df = series_value.to_frame()
-    # duplicate_value = df.duplicated()[column_name]
-    # return ~series.isin(duplicate_value)
     return ~df.duplicated(keep=False)
-    # return df.is_unique
-
-
-
-
 
 # find error case
 def TM_check_status_code_P(df):
@@ -100,29 +89,41 @@ def PAT_check_submit_date(df):
 
 
 def PAT_check_public(df):
-    df_check = df[['PUBLICNO', 'PUBLICDATE']]
+    check_column = ['PUBLICNO', 'PUBLICDATE']
+    df_check = df[check_column]
     count_sum = df_check.isnull().sum(axis=1)
     fail_index = (count_sum == 1)
-    return ~fail_index
+    
+    df_error = get_error_df(df, check_column, fail_index)  
+    return df_error
 
 def PAT_check_patent(df):
-    df_check = df[['PATENTNO', 'PATENTDATE']]
+    check_column = ['PATENTNO', 'PATENTDATE']
+    df_check = df[check_column]
     count_sum = df_check.isnull().sum(axis=1)
     fail_index = (count_sum == 1)
-    return ~fail_index
+    
+    df_error = get_error_df(df, check_column, fail_index)  
+    return df_error
 
 
 def PAT_check_order_date(df):
+    check_column = ['FRM_SUBMIT_DATE', 'RECEIVE_DATE', 'PUBLICDATE', 'PATENTDATE']
     pass_index = (
         (df['FRM_SUBMIT_DATE'] <= df['RECEIVE_DATE']) & \
         (df['RECEIVE_DATE'] < df['PUBLICDATE']) & \
         (df['PUBLICDATE'] < df['PATENTDATE'])
     )
-    return pass_index
+
+    df_error = get_error_df(df, check_column, ~pass_index)  
+    return df_error
 
 def PAT_check_PCT(df):
+    check_column = ['PCT', 'PCTNO']
     fail_index = (df['PCT'] == 'Y') & (df['PCTNO'].isnull())
-    return ~fail_index
+
+    df_error = get_error_df(df, check_column, fail_index)  
+    return df_error
 
 
 ##

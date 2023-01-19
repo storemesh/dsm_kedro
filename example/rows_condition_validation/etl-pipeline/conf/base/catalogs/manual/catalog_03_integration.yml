@@ -5,10 +5,10 @@
 
 integration___TM:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
-  folder_id: 361
+  project_folder_name: Integration
   file_name: TM
   credentials: dsmlibrary
-  config: {
+  schema: {
       'columns': {
           'TR_NO': { 'data_type': 'int', 'nullable': False, 'is_required': False, 'validation_rule': [4]},
           'FILING_DATE': { 'data_type': 'datetime64[ns]', 'nullable': False, 'is_required': False},
@@ -21,10 +21,10 @@ integration___TM:
 
 integration___PAT:
   type: dsm_kedro_plugin.custom_dataset.dsm_dataset.DsmDataNode
-  folder_id: 361
+  project_folder_name: Integration
   file_name: PAT
   credentials: dsmlibrary
-  config: {
+  schema: {
       'columns': {
           'APP_NO': { 'data_type': 'string', 'nullable': False, 'is_required': False, 'validation_rule': [4]},
           'CLASSGROUP': { 'data_type': 'int', 'nullable': False, 'is_required': False},
@@ -34,7 +34,3 @@ integration___PAT:
       'validation_rule': [10, 11, 12, 13, 14],
       'pk_column': 'APP_NO',
   }
-
-  # 'APP_NO', 'FRM_SUBMIT_DATE', 'RECEIVE_DATE', 'PAT_TYPE', 'CLASSGROUP',
-  #      'PUBLICNO', 'PUBLICDATE', 'PATENTNO', 'PATENTDATE', 'NAME', 'PCT',
-  #      'PCTNO', 'SUBMIT_TYPE'
