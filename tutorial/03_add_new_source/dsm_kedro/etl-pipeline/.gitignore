@@ -1,5 +1,6 @@
 ##########################
 # KEDRO PROJECT
+dsm_kedro_plugin
 
 # ignore all local configuration
 conf/local/**
