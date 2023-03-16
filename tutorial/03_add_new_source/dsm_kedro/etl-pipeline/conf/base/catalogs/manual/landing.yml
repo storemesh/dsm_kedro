@@ -1,0 +1,9 @@
+l.db1_exporter:
+  type: pandas.SQLQueryDataSet
+  sql: "SELECT * FROM exporter"
+  credentials: db1_credentials
+
+l.db2_exporter:
+  type: pandas.SQLQueryDataSet
+  sql: "SELECT * FROM exporter"
+  credentials: db2_credentials
