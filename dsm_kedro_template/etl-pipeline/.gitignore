@@ -1,6 +1,9 @@
 ##########################
 # KEDRO PROJECT
 
+# project setting
+src/config/project_setting.py
+
 # ignore all local configuration
 conf/local/**
 !conf/local/.gitkeep
