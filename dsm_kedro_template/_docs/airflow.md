@@ -66,13 +66,17 @@ kedro airflow create --target-dir=airflow_dags/  --pipeline=<your_pipeline_name>
     tasks[<YOUR INTEGRATION TASK NAME>] >> tasks["end_node"]
     ```
 
-3. run Airflow with docker compose
+3. create .env file
+```
+PROJECT_NAME=<YOUR_PROJECT_NAME>
+```
+4. run Airflow with docker compose
 ```
 cd airflow
 docker compose up --build
 ```
 
-4. go to localhost:8084 and login with default username and password
+5. go to localhost:8084 and login with default username and password
 
 ## FAQ
 if you have problem with folder permission, use this following command
