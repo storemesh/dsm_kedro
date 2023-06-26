@@ -19,7 +19,7 @@ RUN sudo apt update && sudo apt-get install -y git
 ADD . /code
 
 WORKDIR /code/etl-pipeline
-RUN pip install -r src/requirements.txt
+RUN pip install -r src/requirements.txt --use-deprecated=legacy-resolver
 
 # install conflict package
 RUN pip install attrs==22.1.0
