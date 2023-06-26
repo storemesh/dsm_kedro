@@ -43,9 +43,30 @@ python -m ipykernel install --user --name kedro-env-<YOUR_PROJECT_NAME> --displa
 ```yml
 # in conf/local/credentials.yml
 dsmlibrary:
-    token: "< YOUR JWT TOKEN >"
+    token: "< YOUR JWT TOKEN >" # token from data platform
+
+    # or use apikey (no expire date)
+    # apikey: "<YOUR APIKEY FROM DATA PLATFORM>"
 ```
-6. clone submodule project
+
+6. put your `project_setting.py` to `src/config/project_setting.py`
+```python
+PROJECT_NAME = "<YOUR_PROJECT_NAME>" # (It must be exactly the same value in Project Table of Data Discovery, use it for generate logs)  
+PROJECT_FOLDER_ID = <YOUR_PROJECT_FOLDER_ID> 
+DATAPLATFORM_API_URI = "<YOUR_DATAPLATFORM_API_URI>" # example: "https://api.discovery.dev.data.storemesh.com"
+OBJECT_STORAGE_URI = "<YOUR_OBJECT_STORAGE_URI>" # example: "dataframe.objectstorage.dev.data.storemesh.com"
+
+OBJECT_STORAGE_SECUE = <True or False> # use True if Object Storage connect with https
+
+REQUIRED_FOLDER_LIST = ["SQLDataNode", "Landing", "Staging", "Integration", "Logs"]
+
+ETL_MODE = {    
+    'mode': 'append', # initial or append
+    'append_folder': ['Integration'],
+}
+```
+
+7. clone submodule project
 ```
 cd etl-pipeline/src/dsm_kedro_plugin
 git submodule update --init --recursive
