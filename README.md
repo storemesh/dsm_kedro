@@ -11,6 +11,7 @@
 | Pipeline Logs Monitoring      | In Progress          | [dsm_kedro_template/_docs/pipeline_logs.md](dsm_kedro_template/_docs/pipeline_logs.md) |
 | Schedule with Airflow         | Done          | [dsm_kedro_template/_docs/airflow.md](dsm_kedro_template/_docs/airflow.md) |
 | Debug and Development         | Done          | [dsm_kedro_template/_docs/debug_delopment.md](dsm_kedro_template/_docs/debug_delopment.md) |
+| Utility Script         | Done          | [dsm_kedro_template/_docs/script.md](dsm_kedro_template/_docs/script.md) |
 
 
 
